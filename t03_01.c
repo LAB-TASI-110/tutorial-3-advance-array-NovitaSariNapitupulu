@@ -1,6 +1,5 @@
-// Delimiter: Start of Code
+
 #include <stdio.h> // Diperlukan untuk fungsi input/output standar seperti printf dan scanf
-#include <limits.h> // Diperlukan untuk INT_MAX jika ingin memeriksa batas, namun kita akan menggunakan long long untuk keamanan
 
 /**
  * @brief Fungsi untuk mengakumulasi total nilai integer.
@@ -24,16 +23,16 @@ long long calculate_total(int n) {
 
 /**
  * @brief Fungsi untuk menghitung rata-rata dari total nilai.
- * @param total Jumlah total nilai.
+ * @param total_sum Jumlah total nilai.
  * @param n Jumlah data.
  * @return Rata-rata sebagai double dengan presisi desimal.
  */
-double calculate_average(long long total, int n) {
+double calculate_average(long long total_sum, int n) {
     if (n == 0) {
         return 0.0; // Menangani edge case jika n adalah 0
     }
-    // Lakukan type casting ke double pada total untuk memastikan pembagian floating-point
-    return (double)total / n;
+    // Lakukan type casting ke double pada total_sum untuk memastikan pembagian floating-point
+    return (double)total_sum / n;
 }
 
 /**
@@ -48,10 +47,17 @@ int main(void) {
         return 1; // Exit dengan error code jika input n gagal
     }
 
+    // Penanganan edge case n=0
+    if (n == 0) {
+        printf("0\n");    // Total
+        printf("0.00\n"); // Rata-rata
+        return 0;
+    }
+
     long long total_sum = calculate_total(n); // Memanggil fungsi untuk menghitung total
 
-    // Cek jika ada error saat membaca nilai
-    if (total_sum == -1 && n > 0) {
+    // Cek jika ada error saat membaca nilai (total_sum hanya bisa -1 jika n>0 dan ada error scanf)
+    if (total_sum == -1) { 
         return 1; // Exit dengan error code
     }
 
@@ -63,4 +69,4 @@ int main(void) {
 
     return 0; // Program berhasil dieksekusi
 }
-// Delimiter: End of Code
+

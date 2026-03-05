@@ -1,4 +1,4 @@
-// Delimiter: Start of Code
+
 #include <stdio.h> // Diperlukan untuk fungsi input/output standar seperti printf dan scanf
 #include <stdlib.h> // Diperlukan untuk alokasi memori dinamis (malloc, free)
 
@@ -7,6 +7,7 @@
  * @param n Jumlah nilai yang akan dibaca.
  * @param scores_array Pointer ke array untuk menyimpan nilai yang dibaca.
  * @return Total dari n nilai yang dibaca. Menggunakan long long untuk menghindari overflow.
+ *         Mengembalikan -1 jika terjadi error input.
  */
 long long read_scores_and_calculate_total(int n, int *scores_array) {
     long long total = 0; // Inisialisasi total dengan long long
@@ -135,4 +136,3 @@ int main(void) {
 
     return 0; // Program berhasil dieksekusi
 }
-// Delimiter: End of Code
