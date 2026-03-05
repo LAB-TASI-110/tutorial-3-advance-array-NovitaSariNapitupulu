@@ -1,4 +1,4 @@
-
+// Delimiter: Start of Code (nilai_02.c)
 #include <stdio.h> // Diperlukan untuk fungsi input/output standar seperti printf dan scanf
 #include <stdlib.h> // Diperlukan untuk alokasi memori dinamis (malloc, free)
 
@@ -106,4 +106,4 @@ int main(void) {
 
     return 0; // Program berhasil dieksekusi
 }
-
+// Delimiter: End of Code (nilai_02.c)

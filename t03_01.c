@@ -1,4 +1,4 @@
-
+// Delimiter: Start of Code (nilai_01.c)
 #include <stdio.h> // Diperlukan untuk fungsi input/output standar seperti printf dan scanf
 
 /**
@@ -69,4 +69,4 @@ int main(void) {
 
     return 0; // Program berhasil dieksekusi
 }
-
+// Delimiter: End of Code (nilai_01.c)
